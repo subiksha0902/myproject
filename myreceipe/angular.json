@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "myreceipe"
+  "defaultProject": "myreceipe",
+  "cli": {
+    "analytics": false
+  }
 }
