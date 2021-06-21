@@ -1,0 +1,35 @@
+<div>
+    <form novalidate #signupForm="ngForm" autocomplete="off">
+        <mat-card class="center">
+            <mat-card-content class="card-center">
+                <h1>LOGIN</h1>
+                <mat-form-field appearance="legacy">
+                    <mat-label for="username">Email</mat-label>
+                    <input matInput placeholder="" id="username" type="email" name="username"
+                        [(ngModel)]="model.Username" #userName="ngModel"
+                        [ngClass]="{'is-valid':(userName.touched || userName.dirty) && !userName.valid}" required>
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+                <div class="invalid-feedback">
+                    <span *ngIf="userName.errors?.required"></span>
+                </div>
+                <br>
+                <br>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="***" id="passWord" type="password" name="password"
+                        [(ngModel)]="model.password" #password="ngModel"
+                        [ngClass]="{'is-valid':(password.touched || password.dirty) && !password.valid}" required>
+                    <mat-icon matSuffix style="cursor: pointer;" (click)="togglePassword()">password</mat-icon>
+                    <mat-hint></mat-hint>
+                </mat-form-field>
+                <br>
+                <br>
+                <button mat-flat-button color="primary" type="submit">Log In</button>
+                <br>
+                <br>
+                <span>Don't have account <a href="">creat one!</a></span>
+            </mat-card-content>
+        </mat-card>
+    </form>
+</div>
