@@ -45,10 +45,15 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponentComponent } from './home-component/home-component.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
+    SignUpComponent,
+    HomeComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,6 +96,7 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   exports: [
     MatAutocompleteModule,
